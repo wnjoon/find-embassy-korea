@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
-const SITE_URL = 'https://embassy.wnjoon.dev';
+const SITE_URL = 'https://findembassykorea.site';
 
 export const metadata: Metadata = {
   title: 'Find Embassy Korea | 주한 대사관 찾기',

@@ -11,7 +11,8 @@
       "Bash(npm run build:*)",
       "Bash(git merge:*)",
       "Bash(git stash:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(npm run lint:*)"
     ],
     "additionalDirectories": [
       "/Users/wonjoon/Workspace/find-embassy-korea/src"
