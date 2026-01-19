@@ -13,7 +13,7 @@ export default function EmbassyList({ embassies, language, isSearching }: Embass
   if (!isSearching) {
     return (
       <div className="flex flex-col items-center justify-center py-20 px-4 text-center">
-        <p className="text-apple-gray-400 dark:text-apple-gray-500">
+        <p className="text-apple-gray-400 dark:text-apple-gray-500 whitespace-pre-line">
           {language === 'ko'
             ? '대사관, 영사관, 국제기구를\n검색해 보세요'
             : 'Search for embassies,\nconsulates, or international organizations'}
@@ -24,7 +24,7 @@ export default function EmbassyList({ embassies, language, isSearching }: Embass
 
   if (embassies.length === 0) {
     return (
-      <div className="flex flex-col items-center justify-center py-20 px-4 text-center">
+      <div className="flex flex-col items-center justify-center py-20 px-4 text-center animate-fade-in-up">
         <p className="text-apple-gray-400 dark:text-apple-gray-500">
           {language === 'ko'
             ? '검색 결과가 없습니다'
@@ -37,11 +37,12 @@ export default function EmbassyList({ embassies, language, isSearching }: Embass
   return (
     <div className="max-w-md mx-auto px-4 py-4 space-y-3">
       {embassies.map((embassy, index) => (
-        <EmbassyCard
+        <div
           key={`${embassy.nameEN}-${index}`}
-          embassy={embassy}
-          language={language}
-        />
+          className={`animate-fade-in-up opacity-0 stagger-${Math.min(index + 1, 5)}`}
+        >
+          <EmbassyCard embassy={embassy} language={language} />
+        </div>
       ))}
     </div>
   );
