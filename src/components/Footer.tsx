@@ -7,14 +7,14 @@ interface FooterProps {
   language: Language;
 }
 
-const FEEDBACK_FORM_URL = 'https://forms.gle/YOUR_FORM_ID'; // TODO: Replace with actual form URL
+const FEEDBACK_EMAIL = 'mailto:konbording@gmail.com?subject=[Find Embassy Korea] 정보 수정 요청';
 
 export default function Footer({ language }: FooterProps) {
   return (
     <footer className="mt-auto py-8 px-4 bg-apple-gray-50 dark:bg-neutral-900/50">
       <div className="max-w-md mx-auto flex flex-col items-center gap-4">
         <a
-          href={FEEDBACK_FORM_URL}
+          href={FEEDBACK_EMAIL}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 px-5 py-2.5 rounded-full
