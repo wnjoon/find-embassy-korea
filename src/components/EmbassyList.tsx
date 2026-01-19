@@ -13,7 +13,7 @@ export default function EmbassyList({ embassies, language, isSearching }: Embass
   if (!isSearching) {
     return (
       <div className="flex flex-col items-center justify-center py-20 px-4 text-center">
-        <p className="text-apple-gray-400 dark:text-apple-gray-500 whitespace-pre-line">
+        <p className="text-apple-gray-400 dark:text-neutral-500 whitespace-pre-line">
           {language === 'ko'
             ? '대사관, 영사관, 국제기구를\n검색해 보세요'
             : 'Search for embassies,\nconsulates, or international organizations'}
@@ -25,7 +25,7 @@ export default function EmbassyList({ embassies, language, isSearching }: Embass
   if (embassies.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center py-20 px-4 text-center animate-fade-in-up">
-        <p className="text-apple-gray-400 dark:text-apple-gray-500">
+        <p className="text-apple-gray-400 dark:text-neutral-500">
           {language === 'ko'
             ? '검색 결과가 없습니다'
             : 'No results found'}

@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" suppressHydrationWarning>
-      <body className="font-sans min-h-screen bg-white dark:bg-black text-apple-gray-600 dark:text-apple-gray-100 transition-colors duration-200">
+      <body className="font-sans min-h-screen bg-white dark:bg-neutral-950 text-apple-gray-600 dark:text-neutral-100 transition-colors duration-200">
         {children}
       </body>
     </html>
